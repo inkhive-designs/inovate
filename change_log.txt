@@ -1,0 +1,20 @@
+	
+
+	— — — ——  Change Log for Inovate Wordpress Theme  — — — —
+
+		v1.0.5	- Initial Release
+
+		v1.1	- 1. Added the Slider 
+			  2. Updated the Screenshot
+
+		v1.2	- 1. Removed the Redux Framework. All settings now using Customizer
+			  2. Improved the Slider
+			  3. Minor bug fixes
+
+		v2.1	- 1. Major Changes to Fonts and Layouts
+			  2. Integrated Font Awesome
+			  3. Updated Bootstrap
+			  4. Fixed a Social Icons Bug
+
+
+		v2.2	- 1. Changed Theme URI
