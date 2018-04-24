@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<section id="primary" class="content-area  <?php do_action('inovate_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'content', 'search' );
+				get_template_part( 'modules/content/content', 'search' );
 				?>
 
 			<?php endwhile; ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'modules/content/content', 'none' ); ?>
 
 		<?php endif; ?>
 

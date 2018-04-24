@@ -18,3 +18,8 @@
 
 
 		v2.2	- 1. Changed Theme URI
+
+		v2.3.0     -1. Updated to Customizer
+		            2. More Features Added
+		            3. Bugs Free
+		            4. Social Icons Improved

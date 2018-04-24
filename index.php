@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div id="primary" class="content-area  <?php do_action('inovate_primary-width') ?>">
 		<main id="main" class="site-main home" role="main">
 			
 		<?php if ( have_posts() ) : ?>
@@ -21,13 +21,12 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+                <?php
+                /* Include the Post-Format-specific template for the content.
+                 */
+                do_action('inovate_blog_layout');
+
+                ?>
 
 			<?php endwhile; ?>
 
@@ -35,12 +34,12 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'modules/content/content', 'none' ); ?>
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

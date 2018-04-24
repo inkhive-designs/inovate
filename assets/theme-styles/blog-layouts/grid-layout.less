@@ -1,0 +1,256 @@
+.grid {
+  span.posted-on {
+    overflow: hidden;
+    display: inline-block;
+    a {
+      color: #999;
+    }
+  }
+
+  span.posted-on:before,
+  span.posted-on:after {
+    background-color: #eee;
+    display: inline-block;
+    height: 1px;
+    content: " ";
+    width: 42%;
+    position: absolute;
+    vertical-align: middle;
+    margin-top: 8px;
+  }
+
+  span.posted-on:before {
+    left: .5em;
+
+  }
+  span.posted-on:after {
+    right: .5em;
+
+  }
+}
+
+span.posted-on {
+  overflow: hidden;
+  display: inline-block;
+}
+
+span.posted-on:before,
+span.posted-on:after {
+  background-color: #eee;
+  display: inline-block;
+  height: 1px;
+  content: " ";
+  width: 38%;
+  position: absolute;
+  vertical-align: middle;
+  margin-top: 8px;
+}
+
+span.posted-on:before {
+  left: .5em;
+
+}
+span.posted-on:after {
+  right: .5em;
+
+}
+
+//----Home Content-----//
+.grid {
+  @media screen and (max-width: 1200px) {
+    span.posted-on:before,
+    span.posted-on:after {
+      width: 40% !important;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    span.posted-on:before,
+    span.posted-on:after {
+      width: 37% !important;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    span.posted-on:before,
+    span.posted-on:after {
+      width: 33% !important;
+    }
+  }
+
+  @media screen and (max-width: 421px) {
+    span.posted-on:before,
+    span.posted-on:after {
+      width: 25% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  span.posted-on:before,
+  span.posted-on:after {
+    width: 35% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  span.posted-on:before,
+  span.posted-on:after {
+    width: 37% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  span.posted-on:before,
+  span.posted-on:after {
+    width: 33% !important;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  span.posted-on:before,
+  span.posted-on:after {
+    width: 25% !important;
+  }
+} //...the dash along the date
+
+.byline {
+  display: none !important;
+}
+
+.grid {
+  margin-top: 100px;
+  &:first-child {
+      margin-top: 0px;
+    }
+    h1.entry-title {
+      .font1;
+      font-size: 36px;
+      a {
+        text-decoration: none;
+      }
+    }
+    .entry-meta {
+      .posted-on {
+        margin: 15px auto;
+      }
+    }
+    .featured-thumb {
+      margin: auto;
+      width: 100%;
+      margin-bottom: 30px;
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+  .entry-content {
+    text-align: center;
+    span a {
+      border: solid 1px #ddd;
+      padding: 8px 12px;
+      position: relative;
+      top: 20px;
+    }
+  }
+}
+
+.entry-footer {
+  display: inline-block;
+  width: 100%;
+  .font1;
+  .cat-links {
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    padding: 3px 8px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 4px;
+      background: #ddd;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: -10px;
+    }
+    a, a:visited {
+      color: #555;
+    }
+  }
+  .tags-links {
+    text-align: center;
+    padding: 3px 8px;
+    position: relative;
+
+    font-weight: bold;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 4px;
+      background: #ddd;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: -10px;
+    }
+    a, a:visited {
+      overflow: hidden;
+      color: #555;
+    }
+  }
+  .comments-link {
+    text-align: center;
+    padding: 3px 8px;
+    position: relative;
+
+    font-weight: bold;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 4px;
+      background: #ddd;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: -10px;
+    }
+    a, a:visited {
+      color: #555;
+    }
+  }
+  .edit-link {
+    float: right;
+    margin: 5px 0;
+    a {
+      color: #999;
+    }
+  }
+}
+
+.grid_2_column {
+  padding: 0;
+  border-bottom: none;
+  .out-thumb {
+    padding: 12px 0;
+
+  }
+  @media screen and (max-width: 768px) {
+    padding-right: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+    &:nth-child(odd) {
+      padding-right: 10px;
+      clear: left;
+    }
+  }
+
+}

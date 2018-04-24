@@ -7,12 +7,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<div id="primary" class="content-area  <?php do_action('inovate_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'modules/content/content', 'single' ); ?>
 
 			<?php inovate_post_nav(); ?>
 

@@ -2,14 +2,16 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package inovate
+ * @package Inovate
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
+if (! is_active_sidebar( 'sidebar-1' ) ) {
+    return;
 }
-?>
 
-<div id="secondary" class="widget-area col-lg-4 col-md-4 col-sm-12 col-xs-12" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- #secondary -->
+
+if ( inovate_load_sidebar() ) : ?>
+    <div id="secondary" class="widget-area <?php do_action('inovate_secondary-width') ?>" role="complementary">
+        <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </div><!-- #secondary -->
+<?php endif; ?>

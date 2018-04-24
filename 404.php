@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area  <?php do_action('inovate_primary-width') ?>">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -53,4 +53,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
