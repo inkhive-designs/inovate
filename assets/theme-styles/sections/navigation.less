@@ -29,47 +29,86 @@
         opacity: 0;
       }
     }
-    li:hover > ul {
-      opacity: 1;
-      margin: 0px;
-      left: 0px;
-      box-shadow: none;
-      font-size: 13px;
-      padding-top: 3px;
-      background: rgba(0,0,0,0);
-      transition: opacity .2s;
-      box-shadow: 0px 1px 1px #ddd;
-      li {
-        margin: 0px;
-        font-size: 14px;
-        border-bottom: solid 1px #fff;
-        &:last-child {
-          border-bottom: none;
-        }
-        a {
-          text-align: left;
-          padding: 3px;
-          color: #333;
-          padding: 10px;
-        }
-        &:nth-child(odd) {
-          background: #eee;
-        }
-        &:nth-child(even) {
-          background: #e6e6e6;
-        }
-      }
+    @media screen and (min-width:600px) {
       li:hover > ul {
-        top: 0px;
-        padding: 0px;
-        padding-left: 1px;
-        background: white;
+        opacity: 1;
+        margin: 0px;
+        left: 0px;
+        box-shadow: none;
+        font-size: 13px;
+        padding-top: 3px;
+        background: rgba(0,0,0,0);
+        transition: opacity .2s;
+        box-shadow: 0px 1px 1px #ddd;
+        li {
+          margin: 0px;
+          font-size: 14px;
+          border-bottom: solid 1px #fff;
+          &:last-child {
+            border-bottom: none;
+          }
+          a {
+            text-align: left;
+            padding: 3px;
+            color: #333;
+            padding: 10px;
+          }
+          &:nth-child(odd) {
+            background: #eee;
+          }
+          &:nth-child(even) {
+            background: #e6e6e6;
+          }
+        }
+        li:hover > ul {
+          top: 0px;
+          padding: 0px;
+          padding-left: 1px;
+          background: white;
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 600px) {
+  #site-navigation {
+    ul {
+      li > ul {
+        opacity: 1;
+        margin: 0px;
+        left: 0px;
+        box-shadow: none;
+        float: none;
+        font-size: 13px;
+        padding-top: 3px;
+        transition: opacity .2s;
+        li {
+          margin: 0px;
+          font-size: 14px;
+          border-bottom: solid 1px #fff;
+          &:last-child {
+            border-bottom: none;
+          }
+          a {
+            padding: 3px;
+            color: #333;
+            padding: 10px;
+          }
+        }
+        li > ul {
+          top: 0px;
+          padding: 0px;
+          padding-left: 1px;
+          background: white;
+        }
+      }
+
+      ul {
+        position: relative;
+      }
+    }
+  }
   button.menu-toggle {
     display: inline-block;
     margin:10px auto;
@@ -82,7 +121,7 @@
     outline: none;
   }
   .menu {
-    position: absolute;
+    position: relative;
     background: white;
     border: solid 1px #ddd;
     z-index: 9999;
@@ -93,21 +132,6 @@
     li {
       float: none;
       overflow: hidden;
-    }
-  }
-  .menu ul li:hover > ul {
-    display: block;
-    z-index: 99999;
-    li:hover > ul {
-      padding-top: 3px !important;
-    }
-  }
-  .menu ul li {
-    position: static;
-  }
-  .toggled {
-    .menu {
-      display: none;
     }
   }
 }

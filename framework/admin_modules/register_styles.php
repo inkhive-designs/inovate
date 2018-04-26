@@ -18,11 +18,7 @@ function inovate_scripts() {
 
     wp_enqueue_style('bx-slider-default-theme-skin', get_template_directory_uri(). "/assets/slider/jquery.bxslider.css", array('inovate-main-style'));
 
-    wp_enqueue_script( 'inovate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
     wp_enqueue_script( 'inovate-external', get_template_directory_uri() . '/js/external.js', array('jquery'), '20120206', true );
-    
-    wp_enqueue_script( 'inovate-js', get_template_directory_uri() . '/js/jquery-1.11.2.js', array('jquery'));
 
     wp_enqueue_script( 'inovate-slider-js', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array(), true );
 
