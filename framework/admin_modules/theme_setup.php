@@ -23,6 +23,9 @@ if ( ! function_exists( 'inovate_setup' ) ) :
      */
     function inovate_setup() {
 
+        //Gutenberg fullscreen content
+        add_theme_support('align-wide');
+
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.

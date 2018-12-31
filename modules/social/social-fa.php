@@ -15,7 +15,7 @@ if ( get_theme_mod('inovate_social_enable') ): ?>
 
 	    $path = get_template_directory_uri()."/assets/images/social/" . get_theme_mod('inovate-social-select', 'def'); ?>
 
-        <?php for($i = 1; $i <= 16; $i ++ ):
+        <?php for($i = 1; $i <= 15; $i ++ ):
             $sicon =  get_theme_mod('inovate_social_'.$i, 'default');
 
             $social = esc_attr(get_theme_mod('inovate_social_'.$i)); ?>
